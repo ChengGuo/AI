@@ -1,0 +1,117 @@
+Agent with State Testing Plan
+
+All test case will be put into folder TestInput under project folder
+TestInput2.txt is the sample input provided by the Lab1 Instruction
+
+
+TestInput2.txt:
+1,CLEAR,0,CLEAR,15,CLEAR,4,CLEAR,4,BOULDER,6
+2,BOULDER,2,CLEAR,9,BOULDER,9,CLEAR,1,CLEAR,6
+
+Expected Output
+
+Position: <1,1> Looking: ? Perceived: <?,?> Action: GRAB
+Position: <?,?> Looking: ? Perceived: <?,?> Action: ?
+Position: <?,?> Looking: ? Perceived: <?,?> Action: ?
+...
+Total Compounds Collected: 6 Total Moves: ???
+
+Actuall Output with Max Move Limit of 10*mapsize
+Position: <1,1> Looking: NORTH Perceived: <0,BOULDER> Action: GRAB
+Position: <1,1> Looking: NORTH Perceived: <0,BOULDER> Action: LOOKNORTH
+Position: <1,1> Looking: NORTH Perceived: <0,BOULDER> Action: LOOKNORTH
+Position: <1,1> Looking: EAST Perceived: <15,CLEAR> Action: GOEAST
+Position: <2,1> Looking: EAST Perceived: <4,CLEAR> Action: GRAB
+Position: <2,1> Looking: EAST Perceived: <4,CLEAR> Action: GOEAST
+Position: <3,1> Looking: EAST Perceived: <4,CLEAR> Action: GRAB
+Position: <3,1> Looking: EAST Perceived: <4,CLEAR> Action: GOEAST
+Position: <4,1> Looking: EAST Perceived: <0,BOULDER> Action: GRAB
+Position: <4,1> Looking: EAST Perceived: <0,BOULDER> Action: LOOKEAST
+Position: <4,1> Looking: NORTH Perceived: <1,CLEAR> Action: GONORTH
+Position: <4,2> Looking: NORTH Perceived: <0,NULL> Action: GRAB
+Position: <4,2> Looking: NORTH Perceived: <0,NULL> Action: LOOKNORTH
+Position: <4,2> Looking: NORTH Perceived: <0,NULL> Action: LOOKNORTH
+Position: <4,2> Looking: NORTH Perceived: <0,NULL> Action: LOOKNORTH
+Position: <4,2> Looking: NORTH Perceived: <0,NULL> Action: LOOKNORTH
+Position: <4,2> Looking: SOUTH Perceived: <4,CLEAR> Action: GOSOUTH
+Position: <4,1> Looking: SOUTH Perceived: <0,NULL> Action: LOOKSOUTH
+Position: <4,1> Looking: NORTH Perceived: <1,CLEAR> Action: GONORTH
+Position: <4,2> Looking: NORTH Perceived: <0,NULL> Action: LOOKNORTH
+Position: <4,2> Looking: EAST Perceived: <6,CLEAR> Action: GOEAST
+Position: <5,2> Looking: EAST Perceived: <0,NULL> Action: GRAB
+Position: <5,2> Looking: EAST Perceived: <0,NULL> Action: LOOKEAST
+Position: <5,2> Looking: EAST Perceived: <0,NULL> Action: LOOKEAST
+Position: <5,2> Looking: EAST Perceived: <0,NULL> Action: LOOKEAST
+Position: <5,2> Looking: EAST Perceived: <0,NULL> Action: LOOKEAST
+Position: <5,2> Looking: WEST Perceived: <1,CLEAR> Action: GOWEST
+Position: <4,2> Looking: WEST Perceived: <0,BOULDER> Action: LOOKWEST
+Position: <4,2> Looking: SOUTH Perceived: <4,CLEAR> Action: GOSOUTH
+Position: <4,1> Looking: SOUTH Perceived: <0,NULL> Action: LOOKSOUTH
+Position: <4,1> Looking: SOUTH Perceived: <0,NULL> Action: LOOKSOUTH
+Position: <4,1> Looking: WEST Perceived: <4,CLEAR> Action: GOWEST
+Position: <3,1> Looking: WEST Perceived: <15,CLEAR> Action: GOWEST
+Position: <2,1> Looking: WEST Perceived: <0,CLEAR> Action: GOWEST
+Position: <1,1> Looking: WEST Perceived: <0,NULL> Action: LOOKWEST
+Position: <1,1> Looking: WEST Perceived: <0,NULL> Action: LOOKWEST
+Position: <1,1> Looking: NORTH Perceived: <0,BOULDER> Action: LOOKNORTH
+Position: <1,1> Looking: NORTH Perceived: <0,BOULDER> Action: LOOKNORTH
+Position: <1,1> Looking: SOUTH Perceived: <0,NULL> Action: LOOKSOUTH
+Position: <1,1> Looking: SOUTH Perceived: <0,NULL> Action: LOOKSOUTH
+Position: <1,1> Looking: WEST Perceived: <0,NULL> Action: LOOKWEST
+Position: <1,1> Looking: WEST Perceived: <0,NULL> Action: LOOKWEST
+Position: <1,1> Looking: EAST Perceived: <15,CLEAR> Action: GOEAST
+Position: <2,1> Looking: EAST Perceived: <4,CLEAR> Action: GOEAST
+Position: <3,1> Looking: EAST Perceived: <4,CLEAR> Action: GOEAST
+Position: <4,1> Looking: EAST Perceived: <0,BOULDER> Action: LOOKEAST
+Position: <4,1> Looking: NORTH Perceived: <1,CLEAR> Action: GONORTH
+Position: <4,2> Looking: NORTH Perceived: <0,NULL> Action: LOOKNORTH
+Position: <4,2> Looking: SOUTH Perceived: <4,CLEAR> Action: GOSOUTH
+Position: <4,1> Looking: SOUTH Perceived: <0,NULL> Action: LOOKSOUTH
+Position: <4,1> Looking: WEST Perceived: <4,CLEAR> Action: GOWEST
+Position: <3,1> Looking: WEST Perceived: <15,CLEAR> Action: GOWEST
+Position: <2,1> Looking: WEST Perceived: <0,CLEAR> Action: GOWEST
+Position: <1,1> Looking: WEST Perceived: <0,NULL> Action: LOOKWEST
+Position: <1,1> Looking: NORTH Perceived: <0,BOULDER> Action: LOOKNORTH
+Position: <1,1> Looking: EAST Perceived: <15,CLEAR> Action: GOEAST
+Position: <2,1> Looking: EAST Perceived: <4,CLEAR> Action: GOEAST
+Position: <3,1> Looking: EAST Perceived: <4,CLEAR> Action: GOEAST
+Position: <4,1> Looking: EAST Perceived: <0,BOULDER> Action: LOOKEAST
+Position: <4,1> Looking: EAST Perceived: <0,BOULDER> Action: LOOKEAST
+Total Compounds Collected: 6 Total Moves: 23
+
+
+Actuall Output with Max Move Limit of 5*mapsize
+Position: <1,1> Looking: NORTH Perceived: <0,BOULDER> Action: GRAB
+Position: <1,1> Looking: NORTH Perceived: <0,BOULDER> Action: LOOKNORTH
+Position: <1,1> Looking: EAST Perceived: <15,CLEAR> Action: GOEAST
+Position: <2,1> Looking: EAST Perceived: <4,CLEAR> Action: GRAB
+Position: <2,1> Looking: EAST Perceived: <4,CLEAR> Action: GOEAST
+Position: <3,1> Looking: EAST Perceived: <4,CLEAR> Action: GRAB
+Position: <3,1> Looking: EAST Perceived: <4,CLEAR> Action: GOEAST
+Position: <4,1> Looking: EAST Perceived: <0,BOULDER> Action: GRAB
+Position: <4,1> Looking: EAST Perceived: <0,BOULDER> Action: LOOKEAST
+Position: <4,1> Looking: NORTH Perceived: <1,CLEAR> Action: GONORTH
+Position: <4,2> Looking: NORTH Perceived: <0,NULL> Action: GRAB
+Position: <4,2> Looking: NORTH Perceived: <0,NULL> Action: LOOKNORTH
+Position: <4,2> Looking: EAST Perceived: <6,CLEAR> Action: GOEAST
+Position: <5,2> Looking: EAST Perceived: <0,NULL> Action: GRAB
+Position: <5,2> Looking: EAST Perceived: <0,NULL> Action: LOOKEAST
+Position: <5,2> Looking: NORTH Perceived: <0,NULL> Action: LOOKNORTH
+Position: <5,2> Looking: SOUTH Perceived: <0,BOULDER> Action: LOOKSOUTH
+Position: <5,2> Looking: NORTH Perceived: <0,NULL> Action: LOOKNORTH
+Position: <5,2> Looking: SOUTH Perceived: <0,BOULDER> Action: LOOKSOUTH
+Position: <5,2> Looking: EAST Perceived: <0,NULL> Action: LOOKEAST
+Position: <5,2> Looking: SOUTH Perceived: <0,BOULDER> Action: LOOKSOUTH
+Position: <5,2> Looking: SOUTH Perceived: <0,BOULDER> Action: LOOKSOUTH
+Position: <5,2> Looking: WEST Perceived: <1,CLEAR> Action: GOWEST
+Position: <4,2> Looking: WEST Perceived: <0,BOULDER> Action: LOOKWEST
+Position: <4,2> Looking: EAST Perceived: <6,CLEAR> Action: GOEAST
+Position: <5,2> Looking: EAST Perceived: <0,NULL> Action: LOOKEAST
+Position: <5,2> Looking: NORTH Perceived: <0,NULL> Action: LOOKNORTH
+Position: <5,2> Looking: SOUTH Perceived: <0,BOULDER> Action: LOOKSOUTH
+Position: <5,2> Looking: WEST Perceived: <1,CLEAR> Action: GOWEST
+Position: <4,2> Looking: WEST Perceived: <0,BOULDER> Action: LOOKWEST
+Total Compounds Collected: 6 Total Moves: 8
+
+
+

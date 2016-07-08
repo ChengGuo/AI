@@ -1,0 +1,66 @@
+ReflexAgent Test Plan
+
+All test case will be put into folder TestInput under project folder
+TestInput2 is the sample input provided by the Lab1 Instruction
+I'm adding TestInput1 as extra set of testing case for RelfexAgent Test
+
+TestInput1.txt:
+1
+7
+0
+10
+
+Expected Output:
+Percept: 1	Action: N
+Percept: 7	Action: N
+Percept: 0	Action: G
+Percept: 10	Action: G
+
+Actual Output:
+Percept: 1	Action: N
+Percept: 7	Action: N
+Percept: 0	Action: G
+Percept: 10	Action: G
+
+
+TestInput2.txt:
+15
+8
+10
+11
+0
+3
+4
+12
+20
+1
+6
+9
+
+Expected Output:
+Percept: 15	Action: G
+Percept: 8	Action: N
+Percept: 10	Action: G
+Percept: 11	Action: N
+Percept: 0	Action: G
+Percept: 3	Action: N
+Percept: 4	Action: N
+Percept: 12	Action: N
+Percept: 20	Action: G
+Percept: 1	Action: N
+Percept: 6	Action: N
+Percept: 9	Action: N
+
+Actual Output:
+Percept: 15	Action: G
+Percept: 8	Action: N
+Percept: 10	Action: G
+Percept: 11	Action: N
+Percept: 0	Action: G
+Percept: 3	Action: N
+Percept: 4	Action: N
+Percept: 12	Action: N
+Percept: 20	Action: G
+Percept: 1	Action: N
+Percept: 6	Action: N
+Percept: 9	Action: N
